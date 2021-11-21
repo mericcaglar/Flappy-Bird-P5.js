@@ -42,7 +42,7 @@ function Game(){
     this.start = () => {
         //Scoreboard
         text("Skor: " + score, 45,30)
-        //Protected true ise kalkan aktif değil ise kalkan pasif yazacak
+        //Protected true ise kalkan aktif, değil ise kalkan pasif yazacak
         text(protected ? "Kalkan: Aktif" : "Kalkan: Pasif",70,60)
 
         //Kuş fonksiyonları
@@ -75,7 +75,7 @@ function Game(){
                 pipes.splice(i,1);
             }
         }
-         //Her 5 skorda bir, armoru aktif ediyor.
+         //Her 5 skorda bir armoru aktif ediyor.
         if(score != 0 && score % 5 == 0){
            protected = true;
            //3sn sonra protected false oluyor
